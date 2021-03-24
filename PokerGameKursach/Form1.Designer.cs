@@ -110,12 +110,20 @@ namespace PokerGameKursach
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1151, 604);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(91)))), ((int)(((byte)(13)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Algerian", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1154, 569);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 31);
+            this.button3.Size = new System.Drawing.Size(98, 48);
             this.button3.TabIndex = 12;
             this.button3.Text = "Fold";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
