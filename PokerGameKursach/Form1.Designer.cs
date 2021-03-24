@@ -78,7 +78,7 @@ namespace PokerGameKursach
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("AR CENA", 24F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(805, 564);
             this.button1.Name = "button1";
@@ -102,11 +102,11 @@ namespace PokerGameKursach
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("AR CENA", 26.25F);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(46, 9);
+            this.label10.Location = new System.Drawing.Point(61, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 26);
+            this.label10.Size = new System.Drawing.Size(176, 41);
             this.label10.TabIndex = 10;
             this.label10.Text = "Chips = 1000";
             // 
@@ -118,7 +118,7 @@ namespace PokerGameKursach
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("AR CENA", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(1134, 564);
             this.button2.Name = "button2";
@@ -136,7 +136,7 @@ namespace PokerGameKursach
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("AR CENA", 24F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(1134, 618);
             this.button3.Name = "button3";
@@ -176,13 +176,13 @@ namespace PokerGameKursach
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("AR CENA", 24F);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(1008, 564);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(108, 48);
             this.button6.TabIndex = 16;
-            this.button6.Text = "Pairs+";
+            this.button6.Text = "Pair+";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -194,7 +194,7 @@ namespace PokerGameKursach
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(1008, 618);
             this.button7.Name = "button7";
@@ -207,7 +207,7 @@ namespace PokerGameKursach
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.numericUpDown1.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Font = new System.Drawing.Font("AR CENA", 26.25F);
             this.numericUpDown1.ForeColor = System.Drawing.Color.White;
             this.numericUpDown1.Increment = new decimal(new int[] {
             10,
@@ -226,7 +226,7 @@ namespace PokerGameKursach
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(69, 49);
+            this.numericUpDown1.Size = new System.Drawing.Size(69, 50);
             this.numericUpDown1.TabIndex = 21;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -238,8 +238,8 @@ namespace PokerGameKursach
             // numericUpDown2
             // 
             this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.numericUpDown2.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.ForeColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown2.Font = new System.Drawing.Font("AR CENA", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.ForeColor = System.Drawing.Color.White;
             this.numericUpDown2.Increment = new decimal(new int[] {
             10,
             0,
@@ -257,7 +257,7 @@ namespace PokerGameKursach
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(69, 49);
+            this.numericUpDown2.Size = new System.Drawing.Size(69, 50);
             this.numericUpDown2.TabIndex = 22;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown2.Value = new decimal(new int[] {
@@ -335,7 +335,7 @@ namespace PokerGameKursach
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(757, 26);
+            this.pictureBox6.Location = new System.Drawing.Point(756, 26);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(135, 189);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -345,7 +345,7 @@ namespace PokerGameKursach
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(867, 460);
+            this.pictureBox7.Location = new System.Drawing.Point(784, 439);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(80, 80);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,7 +355,7 @@ namespace PokerGameKursach
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(1027, 460);
+            this.pictureBox8.Location = new System.Drawing.Point(962, 439);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(80, 80);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,7 +366,7 @@ namespace PokerGameKursach
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(603, 588);
+            this.pictureBox9.Location = new System.Drawing.Point(1122, 469);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(121, 102);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -379,7 +379,7 @@ namespace PokerGameKursach
             this.pictureBox10.Image = global::PokerGameKursach.Resource1.fishka;
             this.pictureBox10.Location = new System.Drawing.Point(10, 7);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.Size = new System.Drawing.Size(45, 45);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 33;
             this.pictureBox10.TabStop = false;
@@ -410,7 +410,7 @@ namespace PokerGameKursach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PokerGameKursach.Resource1.fon_v2;
+            this.BackgroundImage = global::PokerGameKursach.Resource1.fon_v3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.HomeButton);
