@@ -583,16 +583,6 @@ namespace PokerGameKursach {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap background {
-            get {
-                object obj = ResourceManager.GetObject("background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Empty {
             get {
                 object obj = ResourceManager.GetObject("Empty", resourceCulture);
@@ -603,9 +593,9 @@ namespace PokerGameKursach {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fishka2 {
+        internal static System.Drawing.Bitmap fishka {
             get {
-                object obj = ResourceManager.GetObject("fishka2", resourceCulture);
+                object obj = ResourceManager.GetObject("fishka", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -626,6 +616,16 @@ namespace PokerGameKursach {
         internal static System.Drawing.Bitmap fon_v2 {
             get {
                 object obj = ResourceManager.GetObject("fon_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fon_v3 {
+            get {
+                object obj = ResourceManager.GetObject("fon_v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

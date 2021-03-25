@@ -79,7 +79,7 @@ namespace PokerGameKursach
                     numericUpDown2.Maximum = (now_chips - (ante_bet * 2)) / 2;
                 }
             }
-            pictureBox7.Image = PokerGameKursach.Resource1.fishka2;
+            pictureBox7.Image = PokerGameKursach.Resource1.fishka;
         }
 
         private void button2_Click(object sender, EventArgs e)                              // ОТВЕТНАЯ СТАВКА (DOUBLE)
@@ -385,7 +385,7 @@ namespace PokerGameKursach
 
         private void button6_Click(object sender, EventArgs e)                              // С ПАРОЙ ПЛЮС (PAIR+)
         {
-            pictureBox8.Image = PokerGameKursach.Resource1.fishka2;
+            pictureBox8.Image = PokerGameKursach.Resource1.fishka;
 
             //ставка пара плюс
 
