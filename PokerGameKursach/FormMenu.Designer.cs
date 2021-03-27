@@ -49,7 +49,7 @@ namespace PokerGameKursach
             this.GameStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GameStartButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameStartButton.ForeColor = System.Drawing.Color.White;
-            this.GameStartButton.Location = new System.Drawing.Point(49, 184);
+            this.GameStartButton.Location = new System.Drawing.Point(83, 303);
             this.GameStartButton.Name = "GameStartButton";
             this.GameStartButton.Size = new System.Drawing.Size(150, 70);
             this.GameStartButton.TabIndex = 0;
@@ -67,12 +67,14 @@ namespace PokerGameKursach
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(65, 428);
+            this.ExitButton.Location = new System.Drawing.Point(99, 547);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(120, 50);
             this.ExitButton.TabIndex = 1;
+            this.ExitButton.TabStop = false;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // StoreButton
             // 
@@ -84,7 +86,7 @@ namespace PokerGameKursach
             this.StoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StoreButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StoreButton.ForeColor = System.Drawing.Color.White;
-            this.StoreButton.Location = new System.Drawing.Point(65, 260);
+            this.StoreButton.Location = new System.Drawing.Point(99, 379);
             this.StoreButton.Name = "StoreButton";
             this.StoreButton.Size = new System.Drawing.Size(120, 50);
             this.StoreButton.TabIndex = 2;
@@ -101,12 +103,13 @@ namespace PokerGameKursach
             this.AboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutButton.ForeColor = System.Drawing.Color.White;
-            this.AboutButton.Location = new System.Drawing.Point(65, 316);
+            this.AboutButton.Location = new System.Drawing.Point(99, 435);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(120, 50);
             this.AboutButton.TabIndex = 3;
             this.AboutButton.Text = "About";
             this.AboutButton.UseVisualStyleBackColor = false;
+            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
             // RulesButton
             // 
@@ -118,20 +121,21 @@ namespace PokerGameKursach
             this.RulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RulesButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RulesButton.ForeColor = System.Drawing.Color.White;
-            this.RulesButton.Location = new System.Drawing.Point(65, 372);
+            this.RulesButton.Location = new System.Drawing.Point(99, 491);
             this.RulesButton.Name = "RulesButton";
             this.RulesButton.Size = new System.Drawing.Size(120, 50);
             this.RulesButton.TabIndex = 4;
-            this.RulesButton.Text = "Rules";
+            this.RulesButton.Text = "Combo";
             this.RulesButton.UseVisualStyleBackColor = false;
+            this.RulesButton.Click += new System.EventHandler(this.RulesButton_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, -10);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 179);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 189);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -139,15 +143,19 @@ namespace PokerGameKursach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(803, 500);
+            this.BackgroundImage = global::PokerGameKursach.Resource1.menufon1;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RulesButton);
             this.Controls.Add(this.AboutButton);
             this.Controls.Add(this.StoreButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.GameStartButton);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
