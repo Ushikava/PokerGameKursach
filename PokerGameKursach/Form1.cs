@@ -12,9 +12,15 @@ namespace PokerGameKursach
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        Form Parent;
+        public Form1(Form parent)
         {
+            Parent = parent;
             InitializeComponent();
+#if DEBUG
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.Manual;
+#endif
         }
 
 
@@ -674,9 +680,7 @@ namespace PokerGameKursach
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            GC.Collect();
-            FormMenu fr2 = new FormMenu();
-            fr2.Show();
+            Parent.Show();
             Close();
         }
 
@@ -687,31 +691,22 @@ namespace PokerGameKursach
 
         private void HomeButton_MouseLeave(object sender, EventArgs e)
         {
-            GC.Collect();
             HomeButton.Image = Resource1.MenuButton;
         }
 
         private void HomeButton_MouseEnter(object sender, EventArgs e)
         {
-            GC.Collect();
             HomeButton.Image = Resource1.MenuButtonPush;
         }
 
         private void ExitButton_MouseEnter(object sender, EventArgs e)
         {
-            GC.Collect();
             ExitButton.Image = Resource1.ExitButtonPush;
         }
 
         private void ExitButton_MouseLeave(object sender, EventArgs e)
         {
-            GC.Collect();
             ExitButton.Image = Resource1.ExitButton;
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            GC.Collect();
         }
     }
 }
