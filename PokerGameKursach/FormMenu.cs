@@ -12,16 +12,24 @@ namespace PokerGameKursach
 {
     public partial class FormMenu : Form
     {
+        Form1 GameForm;
         public FormMenu()
         {
             InitializeComponent();
+#if DEBUG
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.Manual;
+#endif
         }
 
         private void GameStartButton_Click(object sender, EventArgs e)
         {
-            GC.Collect();
-            Form1 fr1 = new Form1();
-            fr1.Show();
+            if (GameForm == null || GameForm.IsDisposed)
+            {
+                GameForm = new Form1(this);
+            }
+            GameForm.Show();
+
             Hide();
         }
 
@@ -32,16 +40,19 @@ namespace PokerGameKursach
 
         private void RulesButton_Click(object sender, EventArgs e)
         {
-            GC.Collect();
             FormCombinations frcmb = new FormCombinations();
             frcmb.Show();
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
         {
-            GC.Collect();
             FormAbout frabout = new FormAbout();
             frabout.Show();
+        }
+
+        private void FormMenu_Shown(object sender, EventArgs e)
+        {
+            GC.Collect();
         }
     }
 }
