@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>ОПИСАНИЕ И ПРАВИЛА ИГРЫ:
+
+Трехкарточный покер - вариация покера, где игрок играет против крупье. Изобретен Дереком Уэббом в 1994 году.
+
+Игроки перед раздачей карт, должны сделать ставку ante и/или pairplus (pairs+).
+После размещения ставок всеми игроками, дилер сдаёт игрокам и себе по 3 карты.
+Затем игроки могут сбросить карты, потеряв все свои ставки или продолжить игру, сделав ставку call (bet).
+Как только все игроки приняли решения по ставкам, дилер вскрывает карты игроков.
+Если у игроков стоит ставка pairplus (pairs+) и на руках есть комбинация не меньше «пары»,
+то игроку сразу оплачивается ставка pairplus (pairs+) в соответствии с таблицей выплат.
+Если же покерной комбинации нет, тогда ставка pairplus (pairs+) проигрывается.
+Затем дилер сравнивает свои карты с картами игроков.
+Если у дилера нет игры (у дилера все карты младше дамы)— игроку выплачивается ставка ante в двойном размере.
+Если у дилера есть игра и у игрока карты старше чем у дилера — выигрывает игрок с выплатой выигрыша
+по ставкам ante и bet 1:1 или в зависимости от его комбинации по таблице выплат.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIBkAAAEAIAAMDQAAFgAAACgAAAAgAAAAMgAAAAEAIAAAAAAAgAwAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAIBAgEAAAAAAAAAAB0hRyxyLGZAsTBwR9cwcEfrMHBH9jN1SvU0eUzwNn5M5TZ7
+        SNg3gkq8OodNkTN1R2gsa0M5LkVFCwAAAAAAAAAAAAAAAFVVVQMAf38CAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAACAAEBAAAAAAcdPSeBL25F6juJVv89j1r/PI1Y/z2RXP8/k1n/OodO/zR4
+        Sf8wbU7/K2FT/yleVP8wblX/M3RQ/zV4Tf02gE3cNYFGojyAQVlcli4WAAAAAAAAAABVVaoDAAD/AQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAQAAAAAcJlI1yTyMWP89kFr/OohU/TmHVf08jlf+NHhF/iZV
+        QP8jTF//H1B//hZNif4bUpL+IVWU/RxPgPwZSmv9Gktg/ypgb/8ybXb/JGVg/x1eUeseZ06WC0UuLAAA
+        AAACAAAAVVVVAwAAAAAAAAAAAAAAAAAAAAD///8BAAAAFChZOdY/k1z/O4pW+jmGU/46iFf/PItT/yld
+        Pv8eRGD/HVOP/xRQif8mUYD/T2eL/0JUW/8OHxj/Ghk4/yYYV/8iE1X/OzFh/W5sjPyLiLX8cnmm/1Ru
+        kf8wU3P3Dz1klQAUPRkAAAAAVVVVAwAAAAAAAAAAAAAAAAAAAAIiTjGwP5Nc/zqIVfo6h1X/OohX/zuK
+        Uv8kU0T/IE6G/yBdnf8xU3v/eXmV/56Upf9zZID/Pxpz/0kCrf9bANn/XgDi/14A4f9XANP/RACh/0k7
+        Uf/Ottz+17vs+76r2P+YlsL/X3Kd5S5aiVcAAAAAAH9/AgAAAAAAAAAAGC4eUzeAUf87i1f8OodU/zmH
+        Vf89jlb/KF1F/yFRjv8cXIv/NktS/5eLm/9+bJX/RhuD/z4ApP9LBL7/RhOw/zsbnP82IJb/MSOO/zAm
+        iP8nIXv/HytI/39+o/+flL3/t6TM/tC13/vTuOH/U1tz/w9Fb4X/AAABAH9/AgAAAAAqXTvCPZBa/jmH
+        VP06iFX/O4tY/zV7Sf8gTXP/I2OY/x8iU/9EEYv/QguT/y4Agv8yIZH/LEeR/x9RhP8bUnv/HFZ0/x5a
+        a/8gW2X/IFxi/yFdZf8iWG7/F0lj/xpHZv8mSXD/OlJ7/zA/Wv0ZOVf7JF+T/yFZjFsA//8BPz9/BC5q
+        Q/s8jVj/OodU/zmHVf88jlb/LGVK/yFZkf8gP2v/VQDJ/1EByf8tJoD/JFqK/x5ei/8eUnT/JVhd/y5n
+        T/81eE7/OIBO/zqDTv86hE7/OoVO/zqFTf87hVD/N39Q/zB1Uv8mZlX/IFhf/x9NbvsbQmv9FzZYpAAA
+        AAAAAAABL2tD8zyOWP06h1T+OYdV/zyNVf8rYlH/HFmD/zkZj/9KAqz/HEBi/yJolv8eS3r/JE9G/zN1
+        Rf87ilD/P5Ra/z2QWv88jVn/PZBb/z2QXP88jFn/OohX/zqJVv87ilf/PIxW/z2MU/8+jVL/N4FO/y5s
+        Vf0kVmn/G0NzpiSR/wchSjCvPZBa/zmIVfs5h1X/PI5X/y5qR/8eU4j/JjFw/xw4Wv8laqH/HkRr/ytg
+        Of88jlT/PZFc/zmGVf8sZkH/KmA9/ytiPv8qWzv/LmVB/zd7Tv8+jFn/PYxY/zmHVP85hVP/PI5Z/zV7
+        T/84g1L/PpNX/zmGTPwvbmL/H016iwAAABwsZEDWQJVd/zqHVPo6iFb/OYZP/yVUWP8fV4n/JWKg/x1H
+        f/8mVTf/PpJa/zuKWP8yc0j/HkAp/y5rQ/8uaEL/JlQ2/xpMK/8WRib/GUsq/xpTLf8rdkX/Po5Z/z2Q
+        Wv81ekz/EBsT/yFHLv82f1D/PI5a/j6SVf0rZUvxAAEAAAkJCRwuaELLPpJb/zuKVv06iFX9OodP/yxk
+        Sv8mWFr/JVRD/ziDUP86iFb/PI9Z/yNOMv8yc0j/PI1Y/yhZOP8mXTn/ZXxt/7nGvf/M2dH/qLet/01e
+        U/8jWzb/MHBG/x05Jv8sYD7/MW1G/ytaO/8pWTr+OYRU/zBwRfAAAAADAAAAAAAAAAsnWTiaOIFR/z6R
+        Wv86ilj8OINP/TN2RP84g0//O4pX/zqHVP86iFX/OYZT/z2PWf8zckn/HlUw/3qEff//////srCx/25r
+        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
+        HP8=
+</value>
+  </data>
+</root>

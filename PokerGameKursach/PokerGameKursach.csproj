@@ -56,6 +56,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCombinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCombinations.Designer.cs">
+      <DependentUpon>FormCombinations.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +83,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCombinations.resx">
+      <DependentUpon>FormCombinations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -277,6 +295,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fon-v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menufon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combinations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4068203063dc44658658d0e269a93091 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4068203063dc44658658d0e269a93091 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuButtonPush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButtonPush.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,7 +38,6 @@ namespace PokerGameKursach
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
-            button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
             button8.Enabled = false;
@@ -281,16 +280,6 @@ namespace PokerGameKursach
             numericUpDown1.Enabled = true;
             //button5.Enabled = true;
             numericUpDown1.Maximum = (chips / 2);
-        }
-
-        private void button5_Click(object sender, EventArgs e)                              // КНОПКА ПАУЗЫ (PAUSE)
-        {
-            (sender as Button).Enabled = false;
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button6.Enabled = false;
-            button4.Enabled = true;
         }
 
         private void button7_Click(object sender, EventArgs e)                              // БЕЗ ПАРЫ ПЛЮС
@@ -681,6 +670,48 @@ namespace PokerGameKursach
                     Box.Image = PokerGameKursach.Resource1._414;
                     break;
             }
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            GC.Collect();
+            FormMenu fr2 = new FormMenu();
+            fr2.Show();
+            Close();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void HomeButton_MouseLeave(object sender, EventArgs e)
+        {
+            GC.Collect();
+            HomeButton.Image = Resource1.MenuButton;
+        }
+
+        private void HomeButton_MouseEnter(object sender, EventArgs e)
+        {
+            GC.Collect();
+            HomeButton.Image = Resource1.MenuButtonPush;
+        }
+
+        private void ExitButton_MouseEnter(object sender, EventArgs e)
+        {
+            GC.Collect();
+            ExitButton.Image = Resource1.ExitButtonPush;
+        }
+
+        private void ExitButton_MouseLeave(object sender, EventArgs e)
+        {
+            GC.Collect();
+            ExitButton.Image = Resource1.ExitButton;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
         }
     }
 }

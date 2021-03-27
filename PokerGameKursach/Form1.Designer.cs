@@ -36,7 +36,6 @@ namespace PokerGameKursach
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -93,7 +92,7 @@ namespace PokerGameKursach
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(423, 297);
+            this.label9.Location = new System.Drawing.Point(382, 297);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 39);
             this.label9.TabIndex = 9;
@@ -157,16 +156,6 @@ namespace PokerGameKursach
             this.button4.Text = "Начать игру";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(138, 645);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 24);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Завершить игру";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -387,24 +376,30 @@ namespace PokerGameKursach
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
-            this.ExitButton.Location = new System.Drawing.Point(1177, -3);
+            this.ExitButton.Image = global::PokerGameKursach.Resource1.ExitButton;
+            this.ExitButton.Location = new System.Drawing.Point(1193, -3);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(90, 90);
+            this.ExitButton.Size = new System.Drawing.Size(74, 70);
             this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitButton.TabIndex = 34;
             this.ExitButton.TabStop = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.ExitButton.MouseEnter += new System.EventHandler(this.ExitButton_MouseEnter);
+            this.ExitButton.MouseLeave += new System.EventHandler(this.ExitButton_MouseLeave);
             // 
             // HomeButton
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Transparent;
-            this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
-            this.HomeButton.Location = new System.Drawing.Point(1106, 7);
+            this.HomeButton.Image = global::PokerGameKursach.Resource1.MenuButton;
+            this.HomeButton.Location = new System.Drawing.Point(1138, 9);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(65, 65);
+            this.HomeButton.Size = new System.Drawing.Size(49, 45);
             this.HomeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomeButton.TabIndex = 35;
             this.HomeButton.TabStop = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            this.HomeButton.MouseEnter += new System.EventHandler(this.HomeButton_MouseEnter);
+            this.HomeButton.MouseLeave += new System.EventHandler(this.HomeButton_MouseLeave);
             // 
             // Form1
             // 
@@ -413,6 +408,7 @@ namespace PokerGameKursach
             this.BackgroundImage = global::PokerGameKursach.Resource1.fon_v3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ControlBox = false;
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.pictureBox10);
@@ -429,7 +425,6 @@ namespace PokerGameKursach
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -438,10 +433,13 @@ namespace PokerGameKursach
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox9);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Three card poker";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -470,7 +468,6 @@ namespace PokerGameKursach
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;

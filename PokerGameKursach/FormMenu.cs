@@ -19,9 +19,29 @@ namespace PokerGameKursach
 
         private void GameStartButton_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             Form1 fr1 = new Form1();
             fr1.Show();
             Hide();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void RulesButton_Click(object sender, EventArgs e)
+        {
+            GC.Collect();
+            FormCombinations frcmb = new FormCombinations();
+            frcmb.Show();
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            GC.Collect();
+            FormAbout frabout = new FormAbout();
+            frabout.Show();
         }
     }
 }
