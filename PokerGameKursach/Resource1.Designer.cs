@@ -613,6 +613,16 @@ namespace PokerGameKursach {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ExitButtonMousePush {
+            get {
+                object obj = ResourceManager.GetObject("ExitButtonMousePush", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ExitButtonPush {
             get {
                 object obj = ResourceManager.GetObject("ExitButtonPush", resourceCulture);
@@ -666,6 +676,16 @@ namespace PokerGameKursach {
         internal static System.Drawing.Bitmap MenuButton {
             get {
                 object obj = ResourceManager.GetObject("MenuButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MenuButtonMousePush {
+            get {
+                object obj = ResourceManager.GetObject("MenuButtonMousePush", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

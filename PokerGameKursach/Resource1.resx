@@ -127,6 +127,9 @@
   <data name="ExitButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\4068203063dc44658658d0e269a93091 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ExitButtonMousePush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ExitButtonMousePush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ExitButtonPush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ExitButtonPush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +147,9 @@
   </data>
   <data name="MenuButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\4068203063dc44658658d0e269a93091 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuButtonMousePush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\MenuButtonMousePush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuButtonPush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\MenuButtonPush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

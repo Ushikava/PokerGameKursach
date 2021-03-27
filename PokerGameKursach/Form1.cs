@@ -708,5 +708,25 @@ namespace PokerGameKursach
         {
             ExitButton.Image = Resource1.ExitButton;
         }
+
+        private void HomeButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            HomeButton.Image = Resource1.MenuButtonMousePush;
+        }
+
+        private void HomeButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            HomeButton.Image = Resource1.MenuButtonPush;
+        }
+
+        private void ExitButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            ExitButton.Image = Resource1.ExitButtonMousePush;
+        }
+
+        private void ExitButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            ExitButton.Image = Resource1.ExitButtonPush;
+        }
     }
 }

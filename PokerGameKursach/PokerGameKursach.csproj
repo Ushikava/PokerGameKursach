@@ -314,5 +314,11 @@
   <ItemGroup>
     <None Include="Resources\ExitButtonPush.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButtonMousePush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuButtonMousePush.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
