@@ -49,7 +49,7 @@ namespace PokerGameKursach
             this.GameStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GameStartButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameStartButton.ForeColor = System.Drawing.Color.White;
-            this.GameStartButton.Location = new System.Drawing.Point(83, 303);
+            this.GameStartButton.Location = new System.Drawing.Point(99, 327);
             this.GameStartButton.Name = "GameStartButton";
             this.GameStartButton.Size = new System.Drawing.Size(150, 70);
             this.GameStartButton.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace PokerGameKursach
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(99, 547);
+            this.ExitButton.Location = new System.Drawing.Point(115, 571);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(120, 50);
             this.ExitButton.TabIndex = 1;
@@ -84,9 +84,9 @@ namespace PokerGameKursach
             this.StoreButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.StoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.StoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StoreButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StoreButton.ForeColor = System.Drawing.Color.White;
-            this.StoreButton.Location = new System.Drawing.Point(99, 379);
+            this.StoreButton.Location = new System.Drawing.Point(115, 403);
             this.StoreButton.Name = "StoreButton";
             this.StoreButton.Size = new System.Drawing.Size(120, 50);
             this.StoreButton.TabIndex = 2;
@@ -103,7 +103,7 @@ namespace PokerGameKursach
             this.AboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutButton.ForeColor = System.Drawing.Color.White;
-            this.AboutButton.Location = new System.Drawing.Point(99, 435);
+            this.AboutButton.Location = new System.Drawing.Point(115, 515);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(120, 50);
             this.AboutButton.TabIndex = 3;
@@ -121,7 +121,7 @@ namespace PokerGameKursach
             this.RulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RulesButton.Font = new System.Drawing.Font("AR CENA", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RulesButton.ForeColor = System.Drawing.Color.White;
-            this.RulesButton.Location = new System.Drawing.Point(99, 491);
+            this.RulesButton.Location = new System.Drawing.Point(115, 459);
             this.RulesButton.Name = "RulesButton";
             this.RulesButton.Size = new System.Drawing.Size(120, 50);
             this.RulesButton.TabIndex = 4;
@@ -133,7 +133,7 @@ namespace PokerGameKursach
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(52, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(68, 74);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 189);
             this.pictureBox1.TabIndex = 5;
@@ -154,6 +154,7 @@ namespace PokerGameKursach
             this.Controls.Add(this.GameStartButton);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenu";

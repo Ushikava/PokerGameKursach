@@ -9,190 +9,190 @@ namespace PokerGameKursach
     class Exceptions
     {
 
-        public int uexception(int num_of_combo, int p_first, int p_second, int p_third, int k_first, int k_second, int k_third)
+        public int UException(int NumOfCombo, int PFirst, int PSecond, int PThird, int DFirst, int DSecond, int DThird)
         {
-            int result = 0;                                                                           //1 - Игрок победил || 2 - пк победил || 3 - ничья || 0 - У крупье нет игры
+            int Result = 0;                                                                           //1 - Игрок победил || 2 - пк победил || 3 - ничья || 0 - У крупье нет игры
 
-            if ((k_first % 100) >= 12 || (k_second % 100) >= 12 || (k_third % 100) >= 12)
+            if ((DFirst % 100) >= 12 || (DSecond % 100) >= 12 || (DThird % 100) >= 12)
             {
-                if (num_of_combo == 1)                                                                  // Старшая карта у обоих
+                if (NumOfCombo == 1)                                                                  // Старшая карта у обоих
                 {
-                    if (p_third % 100 > k_third % 100)
+                    if (PThird % 100 > DThird % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_third % 100 < k_third % 100)
+                    else if (PThird % 100 < DThird % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        if (p_second % 100 > k_second % 100)
+                        if (PSecond % 100 > DSecond % 100)
                         {
-                            result = 1;
-                            return (result);
+                            Result = 1;
+                            return (Result);
                         }
-                        else if (p_second % 100 < k_second % 100)
+                        else if (PSecond % 100 < DSecond % 100)
                         {
-                            result = 2;
-                            return (result);
+                            Result = 2;
+                            return (Result);
                         }
                         else
                         {
-                            if (p_first % 100 > k_first % 100)
+                            if (PFirst % 100 > DFirst % 100)
                             {
-                                result = 1;
-                                return (result);
+                                Result = 1;
+                                return (Result);
                             }
-                            else if (p_first % 100 < k_first % 100)
+                            else if (PFirst % 100 < DFirst % 100)
                             {
-                                result = 2;
-                                return (result);
+                                Result = 2;
+                                return (Result);
                             }
                             else
                             {
-                                result = 3;
-                                return (result);
+                                Result = 3;
+                                return (Result);
                             }
                         }
                     }
                 }
-                else if (num_of_combo == 2)                                                             // пара у обоих
+                else if (NumOfCombo == 2)                                                             // пара у обоих
                 {
-                    if (p_second % 100 > k_second % 100)
+                    if (PSecond % 100 > DSecond % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_second % 100 < k_second % 100)
+                    else if (PSecond % 100 < DSecond % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        if ((p_first % 100) + (p_second % 100) + (p_third % 100) > (k_first % 100) + (k_second % 100) + (k_third % 100))
+                        if ((PFirst % 100) + (PSecond % 100) + (PThird % 100) > (DFirst % 100) + (DSecond % 100) + (DThird % 100))
                         {
-                            result = 1;
-                            return (result);
+                            Result = 1;
+                            return (Result);
                         }
-                        else if ((p_first % 100) + (p_second % 100) + (p_third % 100) < (k_first % 100) + (k_second % 100) + (k_third % 100))
+                        else if ((PFirst % 100) + (PSecond % 100) + (PThird % 100) < (DFirst % 100) + (DSecond % 100) + (DThird % 100))
                         {
-                            result = 2;
-                            return (result);
+                            Result = 2;
+                            return (Result);
                         }
                         else
                         {
-                            result = 3;
-                            return (result);
+                            Result = 3;
+                            return (Result);
                         }
                     }
                 }
-                else if (num_of_combo == 3)                                                             // флеш у обоих
+                else if (NumOfCombo == 3)                                                             // флеш у обоих
                 {
-                    if (p_third % 100 > k_third % 100)
+                    if (PThird % 100 > DThird % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_third % 100 < k_third % 100)
+                    else if (PThird % 100 < DThird % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        if (p_second % 100 > k_second % 100)
+                        if (PSecond % 100 > DSecond % 100)
                         {
-                            result = 1;
-                            return (result);
+                            Result = 1;
+                            return (Result);
                         }
-                        else if (p_second % 100 < k_second % 100)
+                        else if (PSecond % 100 < DSecond % 100)
                         {
-                            result = 2;
-                            return (result);
+                            Result = 2;
+                            return (Result);
                         }
                         else
                         {
-                            if (p_first % 100 > k_first % 100)
+                            if (PFirst % 100 > DFirst % 100)
                             {
-                                result = 1;
-                                return (result);
+                                Result = 1;
+                                return (Result);
                             }
-                            else if (p_first % 100 < k_first % 100)
+                            else if (PFirst % 100 < DFirst % 100)
                             {
-                                result = 2;
-                                return (result);
+                                Result = 2;
+                                return (Result);
                             }
                             else
                             {
-                                result = 3;
-                                return (result);
+                                Result = 3;
+                                return (Result);
                             }
                         }
                     }
                 }
-                else if (num_of_combo == 4)                                                             // стрит у обоих
+                else if (NumOfCombo == 4)                                                             // стрит у обоих
                 {
-                    if (p_third % 100 > k_third % 100)
+                    if (PThird % 100 > DThird % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_third % 100 < k_third % 100)
+                    else if (PThird % 100 < DThird % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        result = 3;
-                        return (result);
+                        Result = 3;
+                        return (Result);
                     }
                 }
-                else if (num_of_combo == 5)                                                             // Тройка у обоих (НЕ МОЖЕТ БЫТЬ!)
+                else if (NumOfCombo == 5)                                                             // Тройка у обоих (НЕ МОЖЕТ БЫТЬ!)
                 {
-                    if (p_third % 100 > k_third % 100)
+                    if (PThird % 100 > DThird % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_third % 100 < k_third % 100)
+                    else if (PThird % 100 < DThird % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        result = 3;
-                        return (result);
+                        Result = 3;
+                        return (Result);
                     }
                 }
                 else                                                                                    // Стрит - флеш у обоих
                 {
-                    if (p_third % 100 > k_third % 100)
+                    if (PThird % 100 > DThird % 100)
                     {
-                        result = 1;
-                        return (result);
+                        Result = 1;
+                        return (Result);
                     }
-                    else if (p_third % 100 < k_third % 100)
+                    else if (PThird % 100 < DThird % 100)
                     {
-                        result = 2;
-                        return (result);
+                        Result = 2;
+                        return (Result);
                     }
                     else
                     {
-                        result = 3;
-                        return (result);
+                        Result = 3;
+                        return (Result);
                     }
                 }
             }
             else
             {
-                result = 0;
-                return (result);
+                Result = 0;
+                return (Result);
             }
 
         }

@@ -8,288 +8,288 @@ namespace PokerGameKursach
 {
     class ChipsAnalys
     {
-        public int hardbets(int num_of_combo, int ante, int pairplus, int high_card_result)
+        public int HardBets(int NumOfCombo, int Ante, int Pairplus, int HighCardResult)
         {
-            int variable = 0;
+            int Variable = 0;
 
-            if (pairplus == 0)
+            if (Pairplus == 0)
             {
-                switch (num_of_combo)
+                switch (NumOfCombo)
                 {
                     case 1:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else 
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                     case 2:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                     case 3:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                     case 4:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + ante * 2) * 2;
+                            Variable = (Ante + Ante + Ante * 2) * 2;
                             break;
                         }
                     case 5:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 4;
+                            Variable = Ante + Ante + Ante * 4;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + (ante * 2) * 4;
+                            Variable = Ante + Ante + (Ante * 2) * 4;
                             break;
                         }
                     case 6:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 5;
+                            Variable = Ante + Ante + Ante * 5;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + (ante * 2) * 5;
+                            Variable = Ante + Ante + (Ante * 2) * 5;
                             break;
                         }
                 }
-                return (variable);
+                return (Variable);
             }
             else
             {
-                switch (num_of_combo)
+                switch (NumOfCombo)
                 {
                     case 1:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                     case 2:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante) + pairplus * 2;
+                            Variable = (Ante + Ante + Ante) + Pairplus * 2;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 2;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 2;
                             break;
                         }
                     case 3:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante) + pairplus * 5;
+                            Variable = (Ante + Ante + Ante) + Pairplus * 5;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 5;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 5;
                             break;
                         }
                     case 4:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 6;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 6;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 2) + pairplus * 6;
+                            Variable = (Ante + Ante + (Ante * 2) * 2) + Pairplus * 6;
                             break;
                         }
                     case 5:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 4) + pairplus * 21;
+                            Variable = (Ante + Ante + Ante * 4) + Pairplus * 21;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 4) + pairplus * 21;
+                            Variable = (Ante + Ante + (Ante * 2) * 4) + Pairplus * 21;
                             break;
                         }
                     case 6:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 5) + pairplus * 41;
+                            Variable = (Ante + Ante + Ante * 5) + Pairplus * 41;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 5) + pairplus * 41;
+                            Variable = (Ante + Ante + (Ante * 2) * 5) + Pairplus * 41;
                             break;
                         }
                 }
 
-                return (variable);
+                return (Variable);
             }
         }
 
 
-        public int simplebets(int num_of_combo, int ante, int pairplus, int high_card_result)
+        public int SimpleBets(int NumOfCombo, int Ante, int Pairplus, int HighCardResult)
         {
-            int variable = 0;
+            int Variable = 0;
         
-            if (pairplus == 0)
+            if (Pairplus == 0)
             {
-                switch (num_of_combo)
+                switch (NumOfCombo)
                 {
                     case 2:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + ante*2;
+                            Variable = Ante + Ante + Ante*2;
                             break;
                         }
                     case 3:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante;
+                            Variable = Ante + Ante + Ante;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                     case 4:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 2;
+                            Variable = Ante + Ante + Ante * 2;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + (ante * 2) * 2;
+                            Variable = Ante + Ante + (Ante * 2) * 2;
                             break;
                         }
                     case 5:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 4;
+                            Variable = Ante + Ante + Ante * 4;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + (ante * 2) * 4;
+                            Variable = Ante + Ante + (Ante * 2) * 4;
                             break;
                         }
                     case 6:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = ante + ante + ante * 5;
+                            Variable = Ante + Ante + Ante * 5;
                             break;
                         }
                         else
                         {
-                            variable = ante + ante + (ante * 2) * 5;
+                            Variable = Ante + Ante + (Ante * 2) * 5;
                             break;
                         }
                 }
-                return (variable);
+                return (Variable);
             }
             else
             {
-                switch (num_of_combo)
+                switch (NumOfCombo)
                 {
                     case 2:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante) + pairplus * 2;
+                            Variable = (Ante + Ante + Ante) + Pairplus * 2;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 2;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 2;
                             break;
                         }
                     case 3:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante) + pairplus * 5;
+                            Variable = (Ante + Ante + Ante) + Pairplus * 5;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 5;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 5;
                             break;
                         }
                     case 4:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 2) + pairplus * 6;
+                            Variable = (Ante + Ante + Ante * 2) + Pairplus * 6;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 2) + pairplus * 6;
+                            Variable = (Ante + Ante + (Ante * 2) * 2) + Pairplus * 6;
                             break;
                         }
                     case 5:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 4) + pairplus * 21;
+                            Variable = (Ante + Ante + Ante * 4) + Pairplus * 21;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 4) + pairplus * 21;
+                            Variable = (Ante + Ante + (Ante * 2) * 4) + Pairplus * 21;
                             break;
                         }
                     case 6:
-                        if (high_card_result == 0)
+                        if (HighCardResult == 0)
                         {
-                            variable = (ante + ante + ante * 5) + pairplus * 41;
+                            Variable = (Ante + Ante + Ante * 5) + Pairplus * 41;
                             break;
                         }
                         else
                         {
-                            variable = (ante + ante + (ante * 2) * 5) + pairplus * 41;
+                            Variable = (Ante + Ante + (Ante * 2) * 5) + Pairplus * 41;
                             break;
                         }
                 }
 
-                return (variable);
+                return (Variable);
             }
         }
 

@@ -9,37 +9,37 @@ namespace PokerGameKursach
     public class Combinations
     {
 
-        public int combo(int first, int second, int third)
+        public int Combo(int First, int Ssecond, int Third)
         {
-            int result = 0;
+            int Result = 0;
 
-            if (((first % 100) + 1) == second % 100 && ((second % 100) + 1) == third % 100)                             // Стрит
+            if (((First % 100) + 1) == Ssecond % 100 && ((Ssecond % 100) + 1) == Third % 100)                             // Стрит
             {
-                result = 4;
+                Result = 4;
 
-                if (first / 100 == second / 100 && second / 100 == third / 100)                                         // Стрит - флеш
+                if (First / 100 == Ssecond / 100 && Ssecond / 100 == Third / 100)                                         // Стрит - флеш
                 {
-                    result = 6;
+                    Result = 6;
                 }
             }
-            else if (first % 100 == second % 100 && second % 100 == third % 100)                                         // Тройка
+            else if (First % 100 == Ssecond % 100 && Ssecond % 100 == Third % 100)                                         // Тройка
             {
-                result = 5;
+                Result = 5;
             }
-            else if (first / 100 == second / 100 && second / 100 == third / 100)                                         // флеш
+            else if (First / 100 == Ssecond / 100 && Ssecond / 100 == Third / 100)                                         // флеш
             {
-                result = 3;
+                Result = 3;
             }
-            else if (first % 100 == second % 100 || first % 100 == third % 100 || second % 100 == third % 100)           // пара
+            else if (First % 100 == Ssecond % 100 || First % 100 == Third % 100 || Ssecond % 100 == Third % 100)           // пара
             {
-                result = 2;
+                Result = 2;
             }
-            else                                                                                                         // Нет комбинации / старшая карта
+            else                                                                                                            // Нет комбинации / старшая карта
             {
-                result = 1;
+                Result = 1;
             }
 
-            return (result);
+            return (Result);
         }
     }
 }

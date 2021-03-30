@@ -35,7 +35,6 @@ namespace PokerGameKursach
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -51,8 +50,8 @@ namespace PokerGameKursach
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ExitButton = new System.Windows.Forms.PictureBox();
             this.HomeButton = new System.Windows.Forms.PictureBox();
+            this.ComboButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,8 +64,8 @@ namespace PokerGameKursach
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboButton)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -91,10 +90,11 @@ namespace PokerGameKursach
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(382, 297);
+            this.label9.Font = new System.Drawing.Font("AR CENA", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(77, 275);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 39);
+            this.label9.Size = new System.Drawing.Size(0, 65);
             this.label9.TabIndex = 9;
             // 
             // label10
@@ -105,9 +105,9 @@ namespace PokerGameKursach
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(61, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 41);
+            this.label10.Size = new System.Drawing.Size(158, 41);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Chips = 1000";
+            this.label10.Text = "Chips: 1000";
             // 
             // button2
             // 
@@ -144,18 +144,6 @@ namespace PokerGameKursach
             this.button3.Text = "Fold";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(22, 645);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 24);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Начать игру";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -257,12 +245,20 @@ namespace PokerGameKursach
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(22, 282);
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.BorderSize = 3;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("AR CENA", 24F);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(1054, 280);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(99, 43);
+            this.button8.Size = new System.Drawing.Size(162, 60);
             this.button8.TabIndex = 23;
             this.button8.Text = "New Round!";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // pictureBox1
@@ -334,9 +330,9 @@ namespace PokerGameKursach
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(784, 439);
+            this.pictureBox7.Location = new System.Drawing.Point(774, 428);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox7.Size = new System.Drawing.Size(100, 100);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 30;
             this.pictureBox7.TabStop = false;
@@ -344,9 +340,9 @@ namespace PokerGameKursach
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(962, 439);
+            this.pictureBox8.Location = new System.Drawing.Point(952, 428);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox8.Size = new System.Drawing.Size(100, 100);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 31;
             this.pictureBox8.TabStop = false;
@@ -365,7 +361,7 @@ namespace PokerGameKursach
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = global::PokerGameKursach.Resource1.fishka;
+            this.pictureBox10.Image = global::PokerGameKursach.Resource1.newchip;
             this.pictureBox10.Location = new System.Drawing.Point(10, 7);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(45, 45);
@@ -373,29 +369,13 @@ namespace PokerGameKursach
             this.pictureBox10.TabIndex = 33;
             this.pictureBox10.TabStop = false;
             // 
-            // ExitButton
-            // 
-            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.Image = global::PokerGameKursach.Resource1.ExitButton;
-            this.ExitButton.Location = new System.Drawing.Point(1193, -3);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(74, 70);
-            this.ExitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ExitButton.TabIndex = 34;
-            this.ExitButton.TabStop = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            this.ExitButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ExitButton_MouseDown);
-            this.ExitButton.MouseEnter += new System.EventHandler(this.ExitButton_MouseEnter);
-            this.ExitButton.MouseLeave += new System.EventHandler(this.ExitButton_MouseLeave);
-            this.ExitButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ExitButton_MouseUp);
-            // 
             // HomeButton
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeButton.Image = global::PokerGameKursach.Resource1.MenuButton;
-            this.HomeButton.Location = new System.Drawing.Point(1138, 9);
+            this.HomeButton.Location = new System.Drawing.Point(1187, 7);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(49, 45);
+            this.HomeButton.Size = new System.Drawing.Size(65, 65);
             this.HomeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomeButton.TabIndex = 35;
             this.HomeButton.TabStop = false;
@@ -405,6 +385,22 @@ namespace PokerGameKursach
             this.HomeButton.MouseLeave += new System.EventHandler(this.HomeButton_MouseLeave);
             this.HomeButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomeButton_MouseUp);
             // 
+            // ComboButton
+            // 
+            this.ComboButton.BackColor = System.Drawing.Color.Transparent;
+            this.ComboButton.Image = global::PokerGameKursach.Resource1.ComboButton;
+            this.ComboButton.Location = new System.Drawing.Point(1107, 7);
+            this.ComboButton.Name = "ComboButton";
+            this.ComboButton.Size = new System.Drawing.Size(65, 65);
+            this.ComboButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ComboButton.TabIndex = 36;
+            this.ComboButton.TabStop = false;
+            this.ComboButton.Click += new System.EventHandler(this.ComboButton_Click);
+            this.ComboButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ComboButton_MouseDown);
+            this.ComboButton.MouseEnter += new System.EventHandler(this.ComboButton_MouseEnter);
+            this.ComboButton.MouseLeave += new System.EventHandler(this.ComboButton_MouseLeave);
+            this.ComboButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ComboButton_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,8 +409,8 @@ namespace PokerGameKursach
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.ComboButton);
             this.Controls.Add(this.HomeButton);
-            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -429,7 +425,6 @@ namespace PokerGameKursach
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
@@ -443,6 +438,7 @@ namespace PokerGameKursach
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Three card poker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -456,8 +452,8 @@ namespace PokerGameKursach
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,7 +466,6 @@ namespace PokerGameKursach
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -486,8 +481,8 @@ namespace PokerGameKursach
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox ExitButton;
         private System.Windows.Forms.PictureBox HomeButton;
+        private System.Windows.Forms.PictureBox ComboButton;
     }
 }
 

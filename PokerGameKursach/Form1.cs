@@ -25,17 +25,17 @@ namespace PokerGameKursach
 
 
         Random rnd = new Random();
-        public int[] p_hand = new int[3];   //рука игрока
-        public int[] k_hand = new int[3];   //рука крупье
-        public int highest_combination_p = 0;
-        public int highest_combination_k = 0;
-        public int high_card_result = 0;
-        public int quantity = 0;
-        public string congratulations;
-        public int chips = 1000;            //Количество фишек при запуске игры
-        public int now_chips = 0;
-        public int ante_bet = 0;            //размер начальной ставки (Ante)
-        public int pairplus_bet = 0;        //размер ставки пара плюс (Pair+)
+        public int[] PHand = new int[3];   //рука игрока
+        public int[] DHand = new int[3];   //рука крупье
+        public int PHighestCombination = 0;
+        public int DHighestCombination = 0;
+        public int HighCardResult = 0;
+        public int Quantity = 0;
+        public string Congratulations;
+        public int Chips = 1000;            //Количество фишек при запуске игры
+        public int NowChips = 0;
+        public int AnteBet = 0;            //размер начальной ставки (Ante)
+        public int PairplusBet = 0;        //размер ставки пара плюс (Pair+)
 
 
 
@@ -46,27 +46,26 @@ namespace PokerGameKursach
             button3.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
-            button8.Enabled = false;
             numericUpDown1.Enabled = false;
             numericUpDown2.Enabled = false;
-            numericUpDown1.Maximum = (chips / 2);
-            numericUpDown2.Maximum = (chips / 10);
+            numericUpDown1.Maximum = (Chips / 2);
+            numericUpDown2.Maximum = (Chips / 10);
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)                    // КНОПКА НАЧАЛЬНОЙ СТАВКИ (ANTE)
         {
             //начальная ставка
 
-            now_chips = chips;
-            ante_bet = Convert.ToInt32(numericUpDown1.Value);
-            chips -= ante_bet;
-            label10.Text = "Chips = " + Convert.ToString(chips);
+            NowChips = Chips;
+            AnteBet = Convert.ToInt32(numericUpDown1.Value);
+            Chips -= AnteBet;
+            label10.Text = "Chips: " + Convert.ToString(Chips);
             
 
             (sender as Button).Enabled = false;
             numericUpDown1.Enabled = false;
             button7.Enabled = true;
-            if (ante_bet == numericUpDown1.Maximum || chips == 0)
+            if (AnteBet == numericUpDown1.Maximum || Chips == 0)
             {
                 button6.Enabled = false;
                 numericUpDown2.Enabled = false;
@@ -75,29 +74,29 @@ namespace PokerGameKursach
             {
                 button6.Enabled = true;
                 numericUpDown2.Enabled = true;
-                if (((now_chips - (ante_bet * 2)) / 2) >= (chips / 10))
+                if (((NowChips - (AnteBet * 2)) / 2) >= (Chips / 10))
                 {
-                    numericUpDown2.Maximum = (chips / 10);
+                    numericUpDown2.Maximum = (Chips / 10);
                 }
                 else
                 {
-                    numericUpDown2.Maximum = (now_chips - (ante_bet * 2)) / 2;
+                    numericUpDown2.Maximum = (NowChips - (AnteBet * 2)) / 2;
                 }
             }
-            pictureBox7.Image = PokerGameKursach.Resource1.fishka;
+            pictureBox7.Image = PokerGameKursach.Resource1.newchip;
         }
 
         private void button2_Click(object sender, EventArgs e)                              // ОТВЕТНАЯ СТАВКА (DOUBLE)
         {
             int temp;
-            int len = p_hand.Length;
+            int len = PHand.Length;
 
-            chips -= ante_bet;
-            label10.Text = "Chips = " + Convert.ToString(chips);
+            Chips -= AnteBet;
+            label10.Text = "Chips: " + Convert.ToString(Chips);
 
-            GetCard(this.pictureBox4, k_hand[0]);
-            GetCard(this.pictureBox5, k_hand[1]);
-            GetCard(this.pictureBox6, k_hand[2]);
+            GetCard(this.pictureBox4, DHand[0]);
+            GetCard(this.pictureBox5, DHand[1]);
+            GetCard(this.pictureBox6, DHand[2]);
 
             //сортировка карт в руках обоих игроков
 
@@ -105,11 +104,11 @@ namespace PokerGameKursach
             {
                 for (int j = i + 1; j < len; j++)
                 {
-                    if (p_hand[i] % 100 > p_hand[j] % 100)
+                    if (PHand[i] % 100 > PHand[j] % 100)
                     {
-                        temp = p_hand[i];
-                        p_hand[i] = p_hand[j];
-                        p_hand[j] = temp;
+                        temp = PHand[i];
+                        PHand[i] = PHand[j];
+                        PHand[j] = temp;
                     }
                 }
             }
@@ -118,11 +117,11 @@ namespace PokerGameKursach
             {
                 for (int j = i + 1; j < len; j++)
                 {
-                    if (k_hand[i] % 100 > k_hand[j] % 100)
+                    if (DHand[i] % 100 > DHand[j] % 100)
                     {
-                        temp = k_hand[i];
-                        k_hand[i] = k_hand[j];
-                        k_hand[j] = temp;
+                        temp = DHand[i];
+                        DHand[i] = DHand[j];
+                        DHand[j] = temp;
                     }
                 }
             }
@@ -132,8 +131,8 @@ namespace PokerGameKursach
 
             Combinations combinations = new Combinations();
 
-            highest_combination_p = combinations.combo(p_hand[0], p_hand[1], p_hand[2]);
-            highest_combination_k = combinations.combo(k_hand[0], k_hand[1], k_hand[2]);
+            PHighestCombination = combinations.Combo(PHand[0], PHand[1], PHand[2]);
+            DHighestCombination = combinations.Combo(DHand[0], DHand[1], DHand[2]);
 
 
             Exceptions exceptions = new Exceptions();
@@ -142,155 +141,142 @@ namespace PokerGameKursach
 
             //Результат игры:
 
-            if (highest_combination_p == highest_combination_k)
+            if (PHighestCombination == DHighestCombination)
             {
 
-                high_card_result = exceptions.uexception(highest_combination_p, p_hand[0], p_hand[1], p_hand[2], k_hand[0], k_hand[1], k_hand[2]);
+                HighCardResult = exceptions.UException(PHighestCombination, PHand[0], PHand[1], PHand[2], DHand[0], DHand[1], DHand[2]);
 
                 //1 - Игрок победил || 2 - пк победил || 3 - ничья || 0 - у крупье нет игры
 
-                if (high_card_result == 1)
+                if (HighCardResult == 1)
                 {
-                    quantity = chipsAnalys.hardbets(highest_combination_p, ante_bet, pairplus_bet, high_card_result);
-                    label9.Text = "Победил ИГРОК! Комбинация + Старшая карта ";
-                    chips += quantity;
-                    label10.Text = "Chips = " + Convert.ToString(chips);
+                    Quantity = chipsAnalys.HardBets(PHighestCombination, AnteBet, PairplusBet, HighCardResult);
+                    label9.Text = "PLAYER wins! (Larger denomination/High card)";
+                    Chips += Quantity;
+                    label10.Text = "Chips: " + Convert.ToString(Chips);
                 }
-                else if (high_card_result == 2)
+                else if (HighCardResult == 2)
                 {
-                    label9.Text = "Победил ПК! Комбинация + Старшая карта";
-                    
-                    label10.Text = "Chips = " + Convert.ToString(chips);
+                    label9.Text = "Dealer won! (Larger denomination/High card)";
+                    label10.Text = "Chips: " + Convert.ToString(Chips);
                 }
-                else if (high_card_result == 3)
+                else if (HighCardResult == 3)
                 {
-                    label9.Text = "Ничья!";
-                    chips += (ante_bet + pairplus_bet);
-                    label10.Text = "Chips = " + Convert.ToString(chips);
+                    label9.Text = "Draw!";
+                    Chips += (AnteBet + PairplusBet);
+                    label10.Text = "Chips: " + Convert.ToString(Chips);
                 }
                 else
                 {
-                    quantity = chipsAnalys.hardbets(highest_combination_p, ante_bet, pairplus_bet, high_card_result);
-                    label9.Text = "У крупье нет игры!";
-                    chips += quantity;
-                    label10.Text = "Chips = " + Convert.ToString(chips);
+                    Quantity = chipsAnalys.HardBets(PHighestCombination, AnteBet, PairplusBet, HighCardResult);
+                    label9.Text = "PLAYER wins! (The dealer has no game)";
+                    Chips += Quantity;
+                    label10.Text = "Chips: " + Convert.ToString(Chips);
                 }
             }
             else
             {
-                if (highest_combination_p > highest_combination_k)
+                if (PHighestCombination > DHighestCombination)
                 {
-                    if ((k_hand[0] % 100) >= 12 || (k_hand[1] % 100) >= 12 || (k_hand[2] % 100) >= 12)
+                    if ((DHand[0] % 100) >= 12 || (DHand[1] % 100) >= 12 || (DHand[2] % 100) >= 12)
                     {
-                        high_card_result = 1;
+                        HighCardResult = 1;
                     }
                     else
                     {
-                        high_card_result = 0;
+                        HighCardResult = 0;
                     }
 
-                    quantity = chipsAnalys.simplebets(highest_combination_p, ante_bet, pairplus_bet, high_card_result);
+                    Quantity = chipsAnalys.SimpleBets(PHighestCombination, AnteBet, PairplusBet, HighCardResult);
 
-                    if (highest_combination_p == 2)
+                    if (PHighestCombination == 2)
                     {
-                        congratulations = "Победил ИГРОК! Комб - Пара";
-                        chips += quantity;
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "PLAYER wins! (Combination: One pair)";
+                        Chips += Quantity;
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_p == 3)
+                    else if (PHighestCombination == 3)
                     {
-                        congratulations = "Победил ИГРОК! Комб - Флеш";
-                        chips += quantity;
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "PLAYER wins! (Combination: Flush)";
+                        Chips += Quantity;
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_p == 4)
+                    else if (PHighestCombination == 4)
                     {
-                        congratulations = "Победил ИГРОК! Комб - Стрит";
-                        chips += quantity;
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "PLAYER wins! (Combination: Straight)";
+                        Chips += Quantity;
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_p == 5)
+                    else if (PHighestCombination == 5)
                     {
-                        congratulations = "Победил ИГРОК! Комб - Тройка";
-                        chips += quantity;
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "PLAYER wins! (Combination: Three of a kind)";
+                        Chips += Quantity;
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
                     else
                     {
-                        congratulations = "Победил ИГРОК! Комб - Стрит-флеш";
-                        chips += quantity;
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "PLAYER wins! (Combination: Straight flush)";
+                        Chips += Quantity;
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
                 }
                 else
                 {
-                    if (highest_combination_k == 2)
+                    if (DHighestCombination == 2)
                     {
-                        congratulations = "Победил ПК! Комб - Пара";
-                        
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "Dealer won! (Combination: One pair)";
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_k == 3)
+                    else if (DHighestCombination == 3)
                     {
-                        congratulations = "Победил ПК! Комб - Флеш";
-                        
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "Dealer won! (Combination: Flush)";
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_k == 4)
+                    else if (DHighestCombination == 4)
                     {
-                        congratulations = "Победил ПК! Комб - Стрит";
-                        
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "Dealer won! (Combination: Straight)";
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
-                    else if (highest_combination_k == 5)
+                    else if (DHighestCombination == 5)
                     {
-                        congratulations = "Победил ПК! Комб - Тройка";
-                        
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "Dealer won! (Combination: Three of a kind)";
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
                     else
                     {
-                        congratulations = "Победил ПК! Комб - Стрит-флеш";
-                        label10.Text = "Chips = " + Convert.ToString(chips);
+                        Congratulations = "Dealer won! (Combination: Straight flush)";
+                        label10.Text = "Chips: " + Convert.ToString(Chips);
                     }
                 }
 
-                label9.Text = congratulations;
+                label9.Text = Congratulations;
             }
-
             (sender as Button).Enabled = false;
             button8.Enabled = true;
+            button8.Visible = true;
             button3.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)                              // КНОПКА СБРОСА (FOLD)
         {
 
-            label10.Text = "Chips = " + Convert.ToString(chips);
+            label10.Text = "Chips: " + Convert.ToString(Chips);
 
-            GetCard(this.pictureBox4, k_hand[0]);
-            GetCard(this.pictureBox5, k_hand[1]);
-            GetCard(this.pictureBox6, k_hand[2]);
+            GetCard(this.pictureBox4, DHand[0]);
+            GetCard(this.pictureBox5, DHand[1]);
+            GetCard(this.pictureBox6, DHand[2]);
 
-            label9.Text = "Вы сбросили карты";
+            label9.Text = "You folded eour cards";
 
             (sender as Button).Enabled = false;
+            button8.Visible = true;
             button8.Enabled = true;
             button2.Enabled = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)                              // КНОПКА НАЧАЛА ИГРЫ (START)
-        {
-            (sender as Button).Enabled = false;
-            button1.Enabled = true;
-            numericUpDown1.Enabled = true;
-            //button5.Enabled = true;
-            numericUpDown1.Maximum = (chips / 2);
-        }
-
         private void button7_Click(object sender, EventArgs e)                              // БЕЗ ПАРЫ ПЛЮС
         {
-            pairplus_bet = 0;
+            PairplusBet = 0;
 
             Cards q = new Cards();
 
@@ -301,75 +287,79 @@ namespace PokerGameKursach
 
             for (int i = 0; i < 3; i++)
             {
-                p_hand[i] = 0;
-                k_hand[i] = 0;
+                PHand[i] = 0;
+                DHand[i] = 0;
             }
 
             //выдача карт
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[0] = q.cards(suit_index, rank_index);
-            GetCard(this.pictureBox1, p_hand[0]);
+            PHand[0] = q.cards(suit_index, rank_index);
+            GetCard(this.pictureBox1, PHand[0]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[1] = q.cards(suit_index, rank_index);
-            while (p_hand[0] == p_hand[1])
+            PHand[1] = q.cards(suit_index, rank_index);
+            while (PHand[0] == PHand[1])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                p_hand[1] = q.cards(suit_index, rank_index);
+                PHand[1] = q.cards(suit_index, rank_index);
             }
-            GetCard(this.pictureBox2, p_hand[1]);
+            GetCard(this.pictureBox2, PHand[1]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[2] = q.cards(suit_index, rank_index);
-            while (p_hand[0] == p_hand[2] || p_hand[1] == p_hand[2])
+            PHand[2] = q.cards(suit_index, rank_index);
+            while (PHand[0] == PHand[2] || PHand[1] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                p_hand[2] = q.cards(suit_index, rank_index);
+                PHand[2] = q.cards(suit_index, rank_index);
             }
-            GetCard(this.pictureBox3, p_hand[2]);
+            GetCard(this.pictureBox3, PHand[2]);
             
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[0] = q.cards(suit_index, rank_index);
-            while (k_hand[0] == p_hand[0] || k_hand[0] == p_hand[1] || k_hand[0] == p_hand[2])
+            DHand[0] = q.cards(suit_index, rank_index);
+            while (DHand[0] == PHand[0] || DHand[0] == PHand[1] || DHand[0] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[0] = q.cards(suit_index, rank_index);
+                DHand[0] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox4, k_hand[0]);
 
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[1] = q.cards(suit_index, rank_index);
-            while (k_hand[1] == k_hand[0] || k_hand[1] == p_hand[0] || k_hand[1] == p_hand[1] || k_hand[1] == p_hand[2])
+            DHand[1] = q.cards(suit_index, rank_index);
+            while (DHand[1] == DHand[0] || DHand[1] == PHand[0] || DHand[1] == PHand[1] || DHand[1] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[1] = q.cards(suit_index, rank_index);
+                DHand[1] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox5, k_hand[1]);
 
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[2] = q.cards(suit_index, rank_index);
-            while (k_hand[2] == k_hand[1] || k_hand[2] == k_hand[0] || k_hand[2] == p_hand[0] || k_hand[2] == p_hand[1] || k_hand[2] == p_hand[2])
+            DHand[2] = q.cards(suit_index, rank_index);
+            while (DHand[2] == DHand[1] || DHand[2] == DHand[0] || DHand[2] == PHand[0] || DHand[2] == PHand[1] || DHand[2] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[2] = q.cards(suit_index, rank_index);
+                DHand[2] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox6, k_hand[2]);
 
+
+            pictureBox4.Image = Resource1.back2_2;
+            pictureBox5.Image = Resource1.back2_2;
+            pictureBox6.Image = Resource1.back2_2;
 
             (sender as Button).Enabled = false;
             numericUpDown2.Enabled = false;
@@ -380,13 +370,13 @@ namespace PokerGameKursach
 
         private void button6_Click(object sender, EventArgs e)                              // С ПАРОЙ ПЛЮС (PAIR+)
         {
-            pictureBox8.Image = PokerGameKursach.Resource1.fishka;
+            pictureBox8.Image = PokerGameKursach.Resource1.newchip;
 
             //ставка пара плюс
 
-            pairplus_bet = Convert.ToInt32(numericUpDown2.Value);
-            chips -= pairplus_bet;
-            label10.Text = "Chips = " + Convert.ToString(chips);
+            PairplusBet = Convert.ToInt32(numericUpDown2.Value);
+            Chips -= PairplusBet;
+            label10.Text = "Chips: " + Convert.ToString(Chips);
             
 
             Cards q = new Cards();
@@ -398,75 +388,77 @@ namespace PokerGameKursach
 
             for (int i = 0; i < 3; i++)
             {
-                p_hand[i] = 0;
-                k_hand[i] = 0;
+                PHand[i] = 0;
+                DHand[i] = 0;
             }
 
             //выдача карт
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[0] = q.cards(suit_index, rank_index);
-            GetCard(this.pictureBox1, p_hand[0]);
+            PHand[0] = q.cards(suit_index, rank_index);
+            GetCard(this.pictureBox1, PHand[0]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[1] = q.cards(suit_index, rank_index);
-            while (p_hand[0] == p_hand[1])
+            PHand[1] = q.cards(suit_index, rank_index);
+            while (PHand[0] == PHand[1])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                p_hand[1] = q.cards(suit_index, rank_index);
+                PHand[1] = q.cards(suit_index, rank_index);
             }
-            GetCard(this.pictureBox2, p_hand[1]);
+            GetCard(this.pictureBox2, PHand[1]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            p_hand[2] = q.cards(suit_index, rank_index);
-            while (p_hand[0] == p_hand[2] || p_hand[1] == p_hand[2])
+            PHand[2] = q.cards(suit_index, rank_index);
+            while (PHand[0] == PHand[2] || PHand[1] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                p_hand[2] = q.cards(suit_index, rank_index);
+                PHand[2] = q.cards(suit_index, rank_index);
             }
-            GetCard(this.pictureBox3, p_hand[2]);
+            GetCard(this.pictureBox3, PHand[2]);
 
             
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[0] = q.cards(suit_index, rank_index);
-            while (k_hand[0] == p_hand[0] || k_hand[0] == p_hand[1] || k_hand[0] == p_hand[2])
+            DHand[0] = q.cards(suit_index, rank_index);
+            while (DHand[0] == PHand[0] || DHand[0] == PHand[1] || DHand[0] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[0] = q.cards(suit_index, rank_index);
+                DHand[0] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox4, k_hand[0]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[1] = q.cards(suit_index, rank_index);
-            while (k_hand[1] == k_hand[0] || k_hand[1] == p_hand[0] || k_hand[1] == p_hand[1] || k_hand[1] == p_hand[2])
+            DHand[1] = q.cards(suit_index, rank_index);
+            while (DHand[1] == DHand[0] || DHand[1] == PHand[0] || DHand[1] == PHand[1] || DHand[1] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[1] = q.cards(suit_index, rank_index);
+                DHand[1] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox5, k_hand[1]);
 
             suit_index = rnd.Next(1, 5);
             rank_index = rnd.Next(2, 15);
-            k_hand[2] = q.cards(suit_index, rank_index);
-            while (k_hand[2] == k_hand[1] || k_hand[2] == k_hand[0] || k_hand[2] == p_hand[0] || k_hand[2] == p_hand[1] || k_hand[2] == p_hand[2])
+            DHand[2] = q.cards(suit_index, rank_index);
+            while (DHand[2] == DHand[1] || DHand[2] == DHand[0] || DHand[2] == PHand[0] || DHand[2] == PHand[1] || DHand[2] == PHand[2])
             {
                 suit_index = rnd.Next(1, 5);
                 rank_index = rnd.Next(2, 15);
-                k_hand[2] = q.cards(suit_index, rank_index);
+                DHand[2] = q.cards(suit_index, rank_index);
             }
             //GetCard(this.pictureBox6, k_hand[2]);
 
-            
+            pictureBox4.Image = Resource1.back2_2;
+            pictureBox5.Image = Resource1.back2_2;
+            pictureBox6.Image = Resource1.back2_2;
 
             (sender as Button).Enabled = false;
             numericUpDown2.Enabled = false;
@@ -479,10 +471,10 @@ namespace PokerGameKursach
         {
             GC.Collect();
 
-            if (chips == 0 || chips == 1)
+            if (Chips == 0 || Chips == 1)
             {
                 label9.Text = "";
-                label9.Text = "Вы банкрот!";
+                label9.Text = "You are bankrupt!";
                 pictureBox1.Image = PokerGameKursach.Resource1.Empty;
                 pictureBox2.Image = PokerGameKursach.Resource1.Empty;
                 pictureBox3.Image = PokerGameKursach.Resource1.Empty;
@@ -491,6 +483,9 @@ namespace PokerGameKursach
                 pictureBox6.Image = PokerGameKursach.Resource1.Empty;
                 pictureBox7.Image = PokerGameKursach.Resource1.Empty;
                 pictureBox8.Image = PokerGameKursach.Resource1.Empty;
+
+                (sender as Button).Visible = false;
+                (sender as Button).Enabled = false;
             }
             else
             {
@@ -505,13 +500,14 @@ namespace PokerGameKursach
                 pictureBox8.Image = PokerGameKursach.Resource1.Empty;
 
 
+                (sender as Button).Visible = false;
                 (sender as Button).Enabled = false;
                 button2.Enabled = false;
                 button3.Enabled = false;
                 button1.Enabled = true;
                 numericUpDown1.Enabled = true;
-                numericUpDown1.Maximum = (chips / 2);
-                numericUpDown2.Maximum = (chips / 10);
+                numericUpDown1.Maximum = (Chips / 2);
+                numericUpDown2.Maximum = (Chips / 10);
             }
         }
 
@@ -684,11 +680,6 @@ namespace PokerGameKursach
             Close();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void HomeButton_MouseLeave(object sender, EventArgs e)
         {
             HomeButton.Image = Resource1.MenuButton;
@@ -697,16 +688,6 @@ namespace PokerGameKursach
         private void HomeButton_MouseEnter(object sender, EventArgs e)
         {
             HomeButton.Image = Resource1.MenuButtonPush;
-        }
-
-        private void ExitButton_MouseEnter(object sender, EventArgs e)
-        {
-            ExitButton.Image = Resource1.ExitButtonPush;
-        }
-
-        private void ExitButton_MouseLeave(object sender, EventArgs e)
-        {
-            ExitButton.Image = Resource1.ExitButton;
         }
 
         private void HomeButton_MouseDown(object sender, MouseEventArgs e)
@@ -719,14 +700,35 @@ namespace PokerGameKursach
             HomeButton.Image = Resource1.MenuButtonPush;
         }
 
-        private void ExitButton_MouseDown(object sender, MouseEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ExitButton.Image = Resource1.ExitButtonMousePush;
+            GC.Collect();
         }
 
-        private void ExitButton_MouseUp(object sender, MouseEventArgs e)
+        private void ComboButton_MouseEnter(object sender, EventArgs e)
         {
-            ExitButton.Image = Resource1.ExitButtonPush;
+            ComboButton.Image = Resource1.ComboButonPush;
+        }
+
+        private void ComboButton_MouseLeave(object sender, EventArgs e)
+        {
+            ComboButton.Image = Resource1.ComboButton;
+        }
+
+        private void ComboButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            ComboButton.Image = Resource1.ComboButtonMousePush;
+        }
+
+        private void ComboButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            ComboButton.Image = Resource1.ComboButonPush;
+        }
+
+        private void ComboButton_Click(object sender, EventArgs e)
+        {
+            FormCombinations frcmb = new FormCombinations();
+            frcmb.Show();
         }
     }
 }

@@ -29,6 +29,7 @@ namespace PokerGameKursach
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCombinations));
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@ namespace PokerGameKursach
             this.ClientSize = new System.Drawing.Size(844, 561);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCombinations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCombinations";
