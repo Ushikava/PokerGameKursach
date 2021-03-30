@@ -17,9 +17,9 @@ namespace PokerGameKursach
             spade = 4
         }*/
 
-        public int cards(int suit_index, int rank_index)
+        public int cards(int SuitIndex, int RankIndex)
         {
-            return (suit_index*100 + rank_index);
+            return (SuitIndex*100 + RankIndex);
         }
     }
 }

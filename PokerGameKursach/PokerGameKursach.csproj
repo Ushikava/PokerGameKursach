@@ -320,5 +320,20 @@
   <ItemGroup>
     <None Include="Resources\MenuButtonMousePush.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboButonPush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboButtonMousePush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newchip.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
