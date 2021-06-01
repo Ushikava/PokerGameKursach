@@ -653,6 +653,26 @@ namespace PokerGameKursach {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Galactic_Castle {
+            get {
+                object obj = ResourceManager.GetObject("Galactic Castle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kai_Fine_Art {
+            get {
+                object obj = ResourceManager.GetObject("Kai Fine Art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuButton {
             get {
                 object obj = ResourceManager.GetObject("MenuButton", resourceCulture);
@@ -696,6 +716,16 @@ namespace PokerGameKursach {
         internal static System.Drawing.Bitmap newchip {
             get {
                 object obj = ResourceManager.GetObject("newchip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Утро_в_пиксельном_городе {
+            get {
+                object obj = ResourceManager.GetObject("Утро в пиксельном городе", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

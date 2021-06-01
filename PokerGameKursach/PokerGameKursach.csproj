@@ -335,5 +335,14 @@
   <ItemGroup>
     <None Include="Resources\newchip.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Утро в пиксельном городе.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galactic Castle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kai Fine Art.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

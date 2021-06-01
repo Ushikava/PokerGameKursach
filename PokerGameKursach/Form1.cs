@@ -266,7 +266,7 @@ namespace PokerGameKursach
             GetCard(this.pictureBox5, DHand[1]);
             GetCard(this.pictureBox6, DHand[2]);
 
-            label9.Text = "You folded eour cards";
+            label9.Text = "You folded your cards";
 
             (sender as Button).Enabled = false;
             button8.Visible = true;

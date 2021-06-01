@@ -11,7 +11,7 @@ namespace PokerGameKursach
 
         public int UException(int NumOfCombo, int PFirst, int PSecond, int PThird, int DFirst, int DSecond, int DThird)
         {
-            int Result = 0;                                                                           //1 - Игрок победил || 2 - пк победил || 3 - ничья || 0 - У крупье нет игры
+            int Result = 0;                   //1 - Игрок победил || 2 - пк победил || 3 - ничья || 0 - У крупье нет игры
 
             if ((DFirst % 100) >= 12 || (DSecond % 100) >= 12 || (DThird % 100) >= 12)
             {
